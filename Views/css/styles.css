@@ -1,0 +1,24 @@
+/* Importar la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --White: #ffffff;
+    --Black: #000;
+    --color1: #034873;
+    --color2: #ffd608;
+    --color3: #1c5a81;
+    --color4: #012439;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: "Manrope", sans-serif;
+}
+
+
