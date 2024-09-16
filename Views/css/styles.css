@@ -19,6 +19,457 @@
 body {
     width: 100%;
     font-family: "Manrope", sans-serif;
+    background-image: url('https://www.fiftysounds.com/images/graphics/white-low-poly-background-338.jpg');
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Estilo para el explorar izquierdo */
+#explorar {
+    height: 100vh;
+    width: 250px;
+    background-color: var(--color1);
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: left 0.3s ease;
+    overflow: hidden;
+}
+
+#explorar.hidden {
+    left: -250px;
+}
+
+#explorar .nav-link {
+    color: var(--White);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#explorar .nav-link i {
+    margin-right: 10px;
+}
+
+#explorar .nav-link:hover {
+    background-color: var(--color4);
+}
+#explorar .dropdown-user ul{
+    color: var(--White);
+    background-color: var(--color1);
+}
+/* Posicionar el dropdown en la parte inferior del menú izquierdo */
+#explorar .dropdown-user {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.content {
+    padding: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
+    transition: all 0.3s ease;
+    height: auto;
+}
+
+.content.expanded-left {
+    margin-left: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Botón para el explorar izquierdo que sobresale */
+.btn-menu-izquierdo {
+    position: fixed;
+    top: 5%;
+    left: 250px;
+    transform: translateY(-50%);
+    background-color: var(--color1);
+    color: var(--White);
+    border-radius: 0 5px 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: left 0.3s ease;
+}
+
+.btn-menu-izquierdo.hidden {
+    left: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Estilo para el explorar derecho */
+#menu-derecho {
+    height: 100vh;
+    width: 250px;
+    background-color: var(--color1);
+    color: var(--White);
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+#menu-derecho .btn-notificaciones {
+    background-color: var(--color2); /* Color amarillo */
+    color: var(--Black); /* Color del texto */
+    font-weight: 700;
+    border: 1px solid var(--color2);
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    display: inline-flex;
+    align-items: center; /* Alinear icono y texto */
+    gap: 10px; /* Espacio entre icono y texto */
+    position: relative; /* Asegura que el badge se posicione correctamente */
+}
+
+#menu-derecho .btn-notificaciones i {
+    font-size: 18px; /* Tamaño del icono */
+}
+
+#menu-derecho .icon-gear {
+    margin-left: 10px;
+    position: relative;
+    top: 4px;
+    font-size: 25px; /* Tamaño del icono de engranaje */
+    color: var(--White); /* Color del icono engranaje */
+    cursor: pointer; /* Mostrar mano de clic */
+    transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+#menu-derecho .icon-gear:hover {
+    transform: rotate(20deg); /* Girar el engranaje al pasar el mouse */
+}
+
+#menu-derecho .btn-notificaciones .badge {
+    font-size: 0.5rem; /* Tamaño de la insignia */
+}
+
+#menu-derecho .perfil {
+    position: relative;
+    top: 5%;
+    text-align: center;
+    font-size: 30px;
+font-weight: bold;
+}
+#menu-derecho .hexa-container {
+    position: relative;
+    top: 40px;
+    clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+    width: 207px;
+    height: 207px; 
+    background: linear-gradient(45deg, #A73EE7, #00EBFF); /* Degradado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-derecho .hexa {
+    clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+    width: 200px;
+    height: 200px;
+    position: relative
+}
+
+#menu-derecho .hexa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#menu-derecho .nombre-user {
+    position: relative;
+    top: 40px;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+#menu-derecho .close-session {
+    position: absolute;
+    bottom: 20px;
+    margin: 7px;
+    width: 80%;
+    background-color: var(--color2); 
+    color: var(--Black); 
+    font-weight: 700;
+    border: 1px solid var(--color2);
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    font-size: 16px; 
 }
 
 
+#menu-derecho.hidden {
+    right: -250px;
+}
+
+
+.content.expanded-right {
+    margin-right: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Botón para el explorar derecho */
+.btn-menu-derecho {
+    width: 40px;
+    position: absolute;
+    top: 5%;
+    left: -33px;
+    transform: translateY(-50%);
+    background-color: var(--color1);
+    color: var(--White);
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.content .container .menu-dia{
+    margin: 0 auto;     
+    padding: 10px; 
+    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-menu.jpg');
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content .container .menu-dia h2{
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.content .container .menu-dia h5{
+    font-size: 20px;
+    font-weight: 500;
+}
+.content .container .menu-contenido{
+    margin: 0 auto;    
+    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-menu.jpg');
+    margin-top: 25px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.content .container .menu-contenido .ingredientes {
+    background-color: transparent; /* Cambia a cualquier color que desees */
+    padding: 10px;
+}
+
+.content .container .menu-contenido .ingredientes li {
+    background-color: transparent; /* Color de fondo para los li */
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.content .container .menu-contenido .ingredientes .ensalada{
+    font-weight: 500;
+}
+
+.content .container .menu-contenido .ingredientes i {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    font-size: 15px;
+    color: var(--color1); /* Cambia el color del ícono si lo deseas */
+}
+
+.content .container .menu-contenido .precio{
+    font-size: 40px;
+    font-weight: 900;
+}
+.content .container .btn-reservar{
+    margin: 7px;
+    width: 40%;
+    background-color: var(--color1); 
+    color: var(--White); 
+    font-weight: 700;
+    border: 1px solid var(--color1);
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+}
+.content .container .btn-reservar i {
+    font-size: 18px; /* Tamaño del ícono */
+    margin-right: 7px;
+}
+
+
+.list-group-item{
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card{
+    background-color: transparent;
+}
+
+
+/* Estilo del explorar cuando está en modo responsive */
+@media (max-width: 768px) {
+    #explorar {
+        width: 80px;
+    }
+
+    #explorar h4 {
+        display: none;
+    }
+
+    #explorar:hover h4 {
+        display: block;
+    }
+
+    #explorar .nav-link {
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    #explorar .nav-link span {
+        display: none;
+    }
+
+    #explorar .dropdown-user strong {
+        display: none;
+    }
+
+    #explorar:hover .dropdown-user strong {
+        display: inline;
+    }
+
+    .content {
+        margin-left: 80px;
+    }
+
+    #explorar:hover {
+        width: 250px;
+        z-index: 10;
+
+    }
+
+    #explorar:hover+.btn-menu-izquierdo {
+        display: none;
+    }
+
+    #explorar:hover .nav-link {
+        justify-content: flex-start;
+    }
+
+    #explorar:hover .nav-link span {
+        display: inline;
+    }
+}
+
+/* Asegurar que el botón esté visible siempre */
+@media (max-width: 768px) {
+    .btn-menu-izquierdo {
+        left: 80px;
+    }
+
+    .btn-menu-izquierdo.hidden {
+        left: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    #menu-derecho {
+        display: none;
+    }
+
+    .content {
+        margin-right: 0;
+    }
+
+    /* Mostrar el contenido del menú derecho en el explorar izquierdo */
+    #explorar .menu-derecho-content {
+        display: block;
+        margin-top: 20px;
+        color: white;
+    }
+
+    .btn-menu-derecho {
+        display: none;
+    }
+}
+/* Para pantallas más grandes, el dropdown está oculto por defecto */
+@media (min-width: 992px) {
+    #explorar .dropdown-user {
+        display: none;
+    }
+}
+@media (max-width: 426px) {
+    .content .container .menu-dia{
+        width: 98.5%;
+    }
+    
+    .content .container .menu-dia h2{
+        font-size: 25px;
+    }
+    
+    .content .container .menu-dia h5{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .content .container .menu-contenido{
+        width: 98.5%;
+    }
+    .content .container .menu-contenido .ingredientes li {
+        background-color: transparent; 
+        font-weight: 900;
+        font-size: 20px;
+    }
+    
+    .content .container .menu-contenido .ingredientes .ensalada{
+        font-weight: 900;
+        font-size: 15px;
+    }
+    
+    .content .container .menu-contenido .ingredientes i {
+        margin-right: 5px; /* Espacio entre el ícono y el texto */
+        font-size: 10px;
+    }
+    
+    .content .container .menu-contenido .precio{
+        font-size: 30px;
+    }
+    .content .container .btn-reservar{
+        width: 60%;
+        font-size: 16px; 
+    }
+    .content .container .btn-reservar i {
+        font-size: 18px; /* Tamaño del ícono */
+        margin-right: 7px;
+    }
+    
+}
+@media (max-width: 426px) {
+    #explorar {
+        display: none; /* Ocultar el menú */
+    }
+
+}
