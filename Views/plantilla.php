@@ -29,16 +29,14 @@
         require_once "./Views/content/" . $vistasPaginas . "-view.php";
     } else {
 
+        include  "./Views/inc/menu-izquierdo-user.php";
         include $vistasPaginas;
+        include  "./Views/inc/munu-derecho-user.php";
     }
 
     ?>
 
     <?php include "./Views\inc\script.php" ?>
-
-    <footer>
-
-    </footer>
 
 </body>
 
