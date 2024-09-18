@@ -17,7 +17,7 @@
           <div class="text-center mt-3">
           <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
         </div>
-          <button type="submit" class="btn btn-warning">Inicia Sesión</button>
+          <button type="submit" class="btn btn-warning" onclick="button_login('<?= SERVERURL ?>home-user/')">Inicia Sesión</button>
         </form>
         <div class="text-center mt-3">
           <a href="<?= SERVERURL ?>Views/content/registro-view.php" class="text-decoration-none">Registrarme</a>
