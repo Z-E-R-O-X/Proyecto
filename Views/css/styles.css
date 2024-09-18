@@ -27,6 +27,7 @@ body {
 
 /* Estilo para el explorar izquierdo */
 #explorar {
+    display: block;
     height: 100vh;
     width: 250px;
     background-color: var(--color1);
@@ -38,13 +39,19 @@ body {
     overflow: hidden;
 }
 
+#explorar h4 {
+    font-size: 25px;
+    padding: 10px;
+
+}
+
 #explorar.hidden {
     left: -250px;
 }
 
 #explorar .nav-link {
     color: var(--White);
-    font-size: 18px;
+    font-size: 25px;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -56,12 +63,15 @@ body {
 }
 
 #explorar .nav-link:hover {
+    border-radius: 15px;
     background-color: var(--color4);
 }
-#explorar .dropdown-user ul{
+
+#explorar .dropdown-user ul {
     color: var(--White);
     background-color: var(--color1);
 }
+
 /* Posicionar el dropdown en la parte inferior del menú izquierdo */
 #explorar .dropdown-user {
     position: absolute;
@@ -119,40 +129,56 @@ body {
     transition: all 0.3s ease;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 }
+
 #menu-derecho .btn-notificaciones {
-    background-color: var(--color2); /* Color amarillo */
-    color: var(--Black); /* Color del texto */
+    background-color: var(--color2);
+    /* Color amarillo */
+    color: var(--Black);
+    /* Color del texto */
     font-weight: 700;
     border: 1px solid var(--color2);
-    padding: 10px 15px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño de la fuente */
+    padding: 10px 15px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    /* Tamaño de la fuente */
     display: inline-flex;
-    align-items: center; /* Alinear icono y texto */
-    gap: 10px; /* Espacio entre icono y texto */
-    position: relative; /* Asegura que el badge se posicione correctamente */
+    align-items: center;
+    /* Alinear icono y texto */
+    gap: 10px;
+    /* Espacio entre icono y texto */
+    position: relative;
+    /* Asegura que el badge se posicione correctamente */
 }
 
 #menu-derecho .btn-notificaciones i {
-    font-size: 18px; /* Tamaño del icono */
+    font-size: 18px;
+    /* Tamaño del icono */
 }
 
 #menu-derecho .icon-gear {
     margin-left: 10px;
     position: relative;
     top: 4px;
-    font-size: 25px; /* Tamaño del icono de engranaje */
-    color: var(--White); /* Color del icono engranaje */
-    cursor: pointer; /* Mostrar mano de clic */
-    transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+    font-size: 25px;
+    /* Tamaño del icono de engranaje */
+    color: var(--White);
+    /* Color del icono engranaje */
+    cursor: pointer;
+    /* Mostrar mano de clic */
+    transition: transform 0.3s ease;
+    /* Efecto al pasar el mouse */
 }
 
 #menu-derecho .icon-gear:hover {
-    transform: rotate(20deg); /* Girar el engranaje al pasar el mouse */
+    transform: rotate(20deg);
+    /* Girar el engranaje al pasar el mouse */
 }
 
 #menu-derecho .btn-notificaciones .badge {
-    font-size: 0.5rem; /* Tamaño de la insignia */
+    font-size: 0.5rem;
+    /* Tamaño de la insignia */
 }
 
 #menu-derecho .perfil {
@@ -160,15 +186,17 @@ body {
     top: 5%;
     text-align: center;
     font-size: 30px;
-font-weight: bold;
+    font-weight: bold;
 }
+
 #menu-derecho .hexa-container {
     position: relative;
     top: 40px;
     clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
     width: 207px;
-    height: 207px; 
-    background: linear-gradient(45deg, #A73EE7, #00EBFF); /* Degradado */
+    height: 207px;
+    background: linear-gradient(45deg, #A73EE7, #00EBFF);
+    /* Degradado */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,13 +230,13 @@ font-weight: bold;
     bottom: 20px;
     margin: 7px;
     width: 80%;
-    background-color: var(--color2); 
-    color: var(--Black); 
+    background-color: var(--color2);
+    color: var(--Black);
     font-weight: 700;
     border: 1px solid var(--color2);
-    padding: 10px 15px; 
-    border-radius: 5px; 
-    font-size: 16px; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 
@@ -242,91 +270,91 @@ font-weight: bold;
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.content .container .menu-dia{
-    margin: 0 auto;     
-    padding: 10px; 
+.content .container .menu-dia {
+    margin: 0 auto;
+    padding: 10px;
     background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-menu.jpg');
     width: 80%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.content .container .menu-dia h2{
+.content .container .menu-dia h2 {
     font-weight: 900;
     font-size: 40px;
 }
 
-.content .container .menu-dia h5{
+.content .container .menu-dia h5 {
     font-size: 20px;
     font-weight: 500;
 }
-.content .container .menu-contenido{
-    margin: 0 auto;    
+
+.content .container .menu-contenido {
+    margin: 0 auto;
     background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-menu.jpg');
     margin-top: 25px;
     width: 80%;
     border-radius: 10px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
+
 .content .container .menu-contenido .ingredientes {
-    background-color: transparent; /* Cambia a cualquier color que desees */
+    background-color: transparent;
+    /* Cambia a cualquier color que desees */
     padding: 10px;
 }
 
 .content .container .menu-contenido .ingredientes li {
-    background-color: transparent; /* Color de fondo para los li */
+    background-color: transparent;
+    /* Color de fondo para los li */
     font-weight: 900;
     font-size: 30px;
 }
 
-.content .container .menu-contenido .ingredientes .ensalada{
+.content .container .menu-contenido .ingredientes .ensalada {
     font-weight: 500;
+    margin-left: -30px;
 }
 
 .content .container .menu-contenido .ingredientes i {
-    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    margin-right: 10px;
+    /* Espacio entre el ícono y el texto */
     font-size: 15px;
-    color: var(--color1); /* Cambia el color del ícono si lo deseas */
+    color: var(--color1);
+    /* Cambia el color del ícono si lo deseas */
 }
 
-.content .container .menu-contenido .precio{
+.content .container .menu-contenido .precio {
     font-size: 40px;
     font-weight: 900;
 }
-.content .container .btn-reservar{
+
+.content .container .btn-reservar {
     margin: 7px;
     width: 40%;
-    background-color: var(--color1); 
-    color: var(--White); 
+    background-color: var(--color1);
+    color: var(--White);
     font-weight: 700;
     border: 1px solid var(--color1);
-    padding: 10px 15px; 
-    border-radius: 5px; 
-    font-size: 16px; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
 }
+
 .content .container .btn-reservar i {
-    font-size: 18px; /* Tamaño del ícono */
+    font-size: 18px;
+    /* Tamaño del ícono */
     margin-right: 7px;
 }
 
 
-.list-group-item{
+.list-group-item {
     border: none;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-.card{
+.card {
     background-color: transparent;
 }
 
@@ -354,16 +382,21 @@ font-weight: bold;
         display: none;
     }
 
+    #explorar .dropdown-user .imagen {
+        left: -7px;
+        }
+    
+
     #explorar .dropdown-user strong {
+        display: none;
+    }
+
+    #explorar .dropdown-user .dropdown-toggle {
         display: none;
     }
 
     #explorar:hover .dropdown-user strong {
         display: inline;
-    }
-
-    .content {
-        margin-left: 80px;
     }
 
     #explorar:hover {
@@ -377,16 +410,26 @@ font-weight: bold;
     }
 
     #explorar:hover .nav-link {
+        font-size: 25px;
         justify-content: flex-start;
     }
 
     #explorar:hover .nav-link span {
         display: inline;
     }
-}
 
-/* Asegurar que el botón esté visible siempre */
-@media (max-width: 768px) {
+    .content {
+        margin-left: 80px;
+    }
+
+    .content .container .menu-dia {
+        width: 90%;
+    }
+
+    .content .container .menu-contenido {
+        width: 90%;
+    }
+
     .btn-menu-izquierdo {
         left: 80px;
     }
@@ -394,7 +437,161 @@ font-weight: bold;
     .btn-menu-izquierdo.hidden {
         left: 0;
     }
+
 }
+
+
+@media (max-width: 620px) {
+    #explorar {
+        padding: 1px;
+        width: 65px;
+    }
+
+    #explorar .nav-link {
+        justify-content: center;
+        font-size: 25px;
+    }
+    #explorar .dropdown-user .imagen {
+        left: -13px;
+
+        }
+    
+    .content {
+        margin-left: 65px;
+    }
+
+
+    .btn-menu-izquierdo {
+        left: 65px;
+    }
+
+    .btn-menu-izquierdo.hidden {
+        left: 0;
+    }
+
+    .content .container .menu-dia {
+        width: 98.5%;
+    }
+
+    .content .container .menu-dia h2 {
+        font-size: 25px;
+    }
+
+    .content .container .menu-dia h5 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .content .container .menu-contenido {
+        width: 98.5%;
+    }
+
+    .content .container .menu-contenido .ingredientes li {
+        background-color: transparent;
+        font-weight: 900;
+        font-size: 20px;
+    }
+
+    .content .container .menu-contenido .ingredientes .ensalada {
+        font-weight: 900;
+        font-size: 15px;
+    }
+
+    .content .container .menu-contenido .ingredientes i {
+        margin-right: 5px;
+        /* Espacio entre el ícono y el texto */
+        font-size: 10px;
+    }
+
+    .content .container .menu-contenido .precio {
+        font-size: 30px;
+    }
+
+    .content .container .btn-reservar {
+        width: 60%;
+        font-size: 16px;
+    }
+
+    .content .container .btn-reservar i {
+        font-size: 18px;
+        /* Tamaño del ícono */
+        margin-right: 7px;
+    }
+
+}
+
+@media (max-width: 420px) {
+    #explorar {
+        width: 55px;
+    }
+
+    #explorar .nav-link {
+        justify-content: center;
+        font-size: 20px;
+    }
+    #explorar .dropdown-user .imagen {
+        width: 42px !important;
+        height: 42px !important;
+        left: -15px;
+
+        }
+    .content {
+        margin-left: 55px;
+    }
+
+
+    .btn-menu-izquierdo {
+        left: 55px;
+    }
+
+    .btn-menu-izquierdo.hidden {
+        left: 0;
+    }
+
+    .content .container .menu-dia h2 {
+        font-size: 22px;
+    }
+
+    .content .container .menu-dia h5 {
+        font-size: 17px;
+    }
+
+    .content .container .menu-contenido .ingredientes {
+        margin-left: 1px;
+    }
+
+
+    .content .container .menu-contenido .ingredientes .ingre-espacio {
+        padding-left: 1px;
+        font-size: 15px;
+    }
+
+    .content .container .menu-contenido .ingredientes .ensalada {
+        font-size: 12px;
+    }
+
+    .content .container .menu-contenido .ingredientes i {
+        font-size: 10px;
+    }
+
+    .content .container .menu-contenido .precio {
+        font-size: 30px;
+    }
+
+    .content .container .btn-reservar {
+        width: 60%;
+        font-size: 16px;
+    }
+
+    .content .container .btn-reservar i {
+        font-size: 18px;
+        /* Tamaño del ícono */
+        margin-right: 7px;
+    }
+
+}
+
+
 
 @media (max-width: 991px) {
     #menu-derecho {
@@ -415,61 +612,19 @@ font-weight: bold;
     .btn-menu-derecho {
         display: none;
     }
+    #explorar .dropdown-user .imagen {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border: 2px solid var(--White);
+        }
+    
 }
+
 /* Para pantallas más grandes, el dropdown está oculto por defecto */
 @media (min-width: 992px) {
     #explorar .dropdown-user {
         display: none;
     }
-}
-@media (max-width: 426px) {
-    .content .container .menu-dia{
-        width: 98.5%;
-    }
     
-    .content .container .menu-dia h2{
-        font-size: 25px;
-    }
-    
-    .content .container .menu-dia h5{
-        font-size: 20px;
-        font-weight: 500;
-    }
-    .content .container .menu-contenido{
-        width: 98.5%;
-    }
-    .content .container .menu-contenido .ingredientes li {
-        background-color: transparent; 
-        font-weight: 900;
-        font-size: 20px;
-    }
-    
-    .content .container .menu-contenido .ingredientes .ensalada{
-        font-weight: 900;
-        font-size: 15px;
-    }
-    
-    .content .container .menu-contenido .ingredientes i {
-        margin-right: 5px; /* Espacio entre el ícono y el texto */
-        font-size: 10px;
-    }
-    
-    .content .container .menu-contenido .precio{
-        font-size: 30px;
-    }
-    .content .container .btn-reservar{
-        width: 60%;
-        font-size: 16px; 
-    }
-    .content .container .btn-reservar i {
-        font-size: 18px; /* Tamaño del ícono */
-        margin-right: 7px;
-    }
-    
-}
-@media (max-width: 426px) {
-    #explorar {
-        display: none; /* Ocultar el menú */
-    }
-
 }

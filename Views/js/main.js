@@ -1,4 +1,10 @@
-
+document.addEventListener('DOMContentLoaded', function () {
+  // Simula un clic en el botón con la clase '.btn-menu-izquierdo'
+  if (window.innerWidth <= 426) {
+      document.querySelector('.btn-menu-izquierdo').click();
+  } 
+ 
+});
   // Función para ocultar o mostrar el explorar izquierdo
   document.querySelector('.btn-menu-izquierdo').addEventListener('click', function () {
     const explorar = document.getElementById('explorar');
@@ -11,17 +17,7 @@
     // Mover el botón hacia la izquierda cuando el explorar está oculto
     toggleBtn.classList.toggle('hidden');
 
-    if (window.innerWidth <= 426) {
-        toggleBtn.classList.toggle('hidden');
-        
-        if (explorar.style.display === 'block' || explorar.style.display === '') {
-            explorar.style.display = 'none'; // Ocultar el menú
-            toggleBtn.classList.toggle('hidden');
-        } else {
-            explorar.style.display = 'block'; // Mostrar el menú
-            toggleBtn.classList.toggle('hidden');
-        }
-    } 
+  
 });
 
 // Función para ocultar o mostrar el explorar derecho

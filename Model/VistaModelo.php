@@ -1,26 +1,34 @@
 <?php
 
-class VistaModelo{
+class VistaModelo {
 
-    protected static function obtener_vista_modelo($vista){
-        $listaPaginas = ["registro","recuperaclave","perfil"];
-        if(in_array($vista, $listaPaginas)){
+    protected static function obtener_vista_modelo($vista) {
 
-            if(is_file("./Views/content/".$vista."-view.php")){
+        // Lista de páginas permitidas
+        $listaPaginas = ["home-user","user-list","user-update"];
 
-                $contenido = "./Views/content/".$vista."-view.php";
-            }else{
+        // Verificar si la vista solicitada está en la lista de páginas permitidas
+        if (in_array($vista, $listaPaginas)) {
+
+            // Verificar si el archivo de la vista existe en el directorio correspondiente
+            if (is_file("./Views/content/" . $vista . "-view.php")) {
+                
+                $contenido = "./Views/content/" . $vista . "-view.php";
+            } else {
+                // Si el archivo no existe, devolver 404
                 $contenido = "404";
             }
-        }elseif($vista=="login" || $vista == "index"){
-            
+
+        } elseif ($vista == "login" || $vista == "index") {
+            // Manejo especial para vistas de login o index
             $contenido = "login";
 
-        }else{
-
+        } else {
+            // Si la vista solicitada no está en la lista y no es login, devolver 404
             $contenido = "404";
         }
 
         return $contenido;
     }
 }
+?>
