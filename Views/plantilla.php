@@ -24,7 +24,7 @@
 
     $vistasPaginas = $IVC->obtener_vista_controlador();
 
-    if ($vistasPaginas == "login" || $vistasPaginas == "404") {
+    if ($vistasPaginas == "login" || $vistasPaginas == "registro" || $vistasPaginas == "404") {
 
         require_once "./Views/content/" . $vistasPaginas . "-view.php";
     } else {

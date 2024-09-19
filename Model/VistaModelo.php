@@ -23,7 +23,13 @@ class VistaModelo {
             // Manejo especial para vistas de login o index
             $contenido = "login";
 
-        } else {
+        } elseif ($vista == "registro" ){
+
+            $contenido = "registro";
+
+        }
+        
+        else {
             // Si la vista solicitada no está en la lista y no es login, devolver 404
             $contenido = "404";
         }
