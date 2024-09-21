@@ -37,6 +37,7 @@
     ?>
 
     <?php include "./Views\inc\script.php" ?>
+    
 
 </body>
 

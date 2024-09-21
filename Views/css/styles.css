@@ -33,69 +33,73 @@ body {
     height: 85vh;
     width: 100%;
     font-size: 18px;
-  }
-  
-  .login-image-container {
+}
+
+.login-image-container {
     background-color: #cfe7fe;
     position: relative;
-  }
-  
-  .login .der{
+}
+
+.login .der {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-  }
+}
 
-  .login-image {
+.login-image {
     background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/74/86/c8/comedor.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
     border: 5px solid var(--color2);
-    width: 92%;  /* Cambiamos a un ancho del 100% para que se ajuste al contenedor */
-    height: 88%; /* Permite que la altura sea automática */
-    max-width: 2500px; /* Limita el tamaño máximo de la imagen para pantallas grandes */
-    aspect-ratio: 4 / 3; /* Mantiene la relación de aspecto de la imagen */
+    width: 92%;
+    /* Cambiamos a un ancho del 100% para que se ajuste al contenedor */
+    height: 88%;
+    /* Permite que la altura sea automática */
+    max-width: 2500px;
+    /* Limita el tamaño máximo de la imagen para pantallas grandes */
+    aspect-ratio: 4 / 3;
+    /* Mantiene la relación de aspecto de la imagen */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-  
-  .form-label {
+
+.form-label {
     color: #5e6b7c;
-  }
-  
-  .form-control {
+}
+
+.form-control {
     background-color: #f1f3f5;
     border: none;
     border-radius: 30px;
     padding: 13px;
-  }
-  
-  .btn-warning {
+}
+
+.btn-warning {
     background-color: #ffd608;
     border: none;
     color: #000;
-    padding: 10px 70px; 
+    padding: 10px 70px;
     font-size: 22px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 10px; 
+    border-radius: 10px;
     text-decoration: none;
     display: flex;
     justify-content: center;
     width: 80%;
     margin: 0 auto;
-  }
+}
 
-  .btn{
+.btn {
     margin-top: 30px;
-  }
-  
-  .btn-warning:hover {
+}
+
+.btn-warning:hover {
     background-color: #e2b607;
-  }
-  
+}
+
 /* Estilo para el explorar izquierdo */
 #explorar {
     display: block;
@@ -124,9 +128,35 @@ body {
     color: var(--White);
     font-size: 25px;
     display: flex;
+    padding-top: 10px;
     align-items: center;
     white-space: nowrap;
     overflow: hidden;
+}
+
+#explorar .nav-explorar {
+    color: var(--White);
+    font-size: 25px;
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#explorar .nav-explorar .fa-compass {
+    padding-left: 17px;
+    padding-bottom: 5px;
+}
+
+#explorar .Notificaciones .badge {
+    background-color: var(--color2);
+    color: var(--Black);
+    font-size: 0.64rem;
+}
+
+#explorar .Notificaciones {
+    display: none;
 }
 
 #explorar .nav-link i {
@@ -203,53 +233,38 @@ body {
 
 #menu-derecho .btn-notificaciones {
     background-color: var(--color2);
-    /* Color amarillo */
     color: var(--Black);
-    /* Color del texto */
     font-weight: 700;
     border: 1px solid var(--color2);
     padding: 10px 15px;
-    /* Espaciado interno */
     border-radius: 5px;
-    /* Bordes redondeados */
     font-size: 16px;
-    /* Tamaño de la fuente */
     display: inline-flex;
     align-items: center;
-    /* Alinear icono y texto */
     gap: 10px;
-    /* Espacio entre icono y texto */
     position: relative;
-    /* Asegura que el badge se posicione correctamente */
 }
 
 #menu-derecho .btn-notificaciones i {
     font-size: 18px;
-    /* Tamaño del icono */
 }
 
 #menu-derecho .icon-gear {
     margin-left: 10px;
     position: relative;
-    top: 4px;
+    top: 20px;
     font-size: 25px;
-    /* Tamaño del icono de engranaje */
     color: var(--White);
-    /* Color del icono engranaje */
     cursor: pointer;
-    /* Mostrar mano de clic */
     transition: transform 0.3s ease;
-    /* Efecto al pasar el mouse */
 }
 
 #menu-derecho .icon-gear:hover {
     transform: rotate(20deg);
-    /* Girar el engranaje al pasar el mouse */
 }
 
 #menu-derecho .btn-notificaciones .badge {
     font-size: 0.5rem;
-    /* Tamaño de la insignia */
 }
 
 #menu-derecho .perfil {
@@ -259,7 +274,6 @@ body {
     font-size: 30px;
     font-weight: bold;
 }
-
 #menu-derecho .hexa-container {
     position: relative;
     top: 40px;
@@ -267,7 +281,6 @@ body {
     width: 207px;
     height: 207px;
     background: linear-gradient(45deg, #A73EE7, #00EBFF);
-    /* Degradado */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,7 +290,8 @@ body {
     clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
     width: 200px;
     height: 200px;
-    position: relative
+    position: relative;
+    overflow: hidden;
 }
 
 #menu-derecho .hexa img {
@@ -285,6 +299,9 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    position: absolute; 
+    top: 0;
+    left: 0;
 }
 
 #menu-derecho .nombre-user {
@@ -315,6 +332,87 @@ body {
     right: -250px;
 }
 
+
+.modal .modal-dialog {
+    max-width: 500px;
+}
+
+.modal .modal-dialog .modal-content {
+    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-menu.jpg');
+    border: 1px solid var(--White);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.modal .modal-content .modal-title {
+    color: var(--Black);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.modal .modal-content .modal-body li {
+    color: var(--White);
+    background-color: var(--color1);
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--White);
+}
+
+.modal .modal-content .modal-body li small {
+    color: var(--White);
+
+}
+
+.modal .btn-close {
+    color: var(--White);
+}
+
+.modal .modal-content .btn-close {
+    background-color: var(--color1) !important;
+    color: var(--White) !important;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 15%;
+    border: 1px solid var(--White);
+    opacity: 1;
+}
+
+.modal .modal-content .btn-close-custom {
+    background-color: var(--color1) !important;
+    color: var(--White) !important;
+    border-radius: 15%;
+    border: 1px solid var(--White);
+    font-size: 1.5rem;
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.modal .modal-content .btn-close-custom:hover,
+.modal .modal-content .btn-close-custom:focus {
+    color: #000;
+    opacity: 0.75;
+    text-decoration: none;
+}
+
+/* Asegúrate de que el botón no tenga outline al enfocarse */
+.modal .modal-content .btn-close-custom:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Aseguramos que el header del modal tenga el display flex */
+.modal .modal-content .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .content.expanded-right {
     margin-right: 0;
@@ -446,17 +544,21 @@ body {
 
     #explorar .nav-link {
         justify-content: center;
-        font-size: 18px;
+        font-size: 25px;
     }
 
     #explorar .nav-link span {
         display: none;
     }
 
+    #explorar .nav-link .numero {
+        display: block;
+    }
+
     #explorar .dropdown-user .imagen {
         left: -7px;
-        }
-    
+    }
+
 
     #explorar .dropdown-user strong {
         display: none;
@@ -522,11 +624,12 @@ body {
         justify-content: center;
         font-size: 25px;
     }
+
     #explorar .dropdown-user .imagen {
         left: -13px;
 
-        }
-    
+    }
+
     .content {
         margin-left: 65px;
     }
@@ -570,7 +673,6 @@ body {
 
     .content .container .menu-contenido .ingredientes i {
         margin-right: 5px;
-        /* Espacio entre el ícono y el texto */
         font-size: 10px;
     }
 
@@ -588,6 +690,13 @@ body {
         /* Tamaño del ícono */
         margin-right: 7px;
     }
+    .modal .modal-dialog {
+        max-width: 350px;
+        margin: 20px auto;
+    }
+    .modal .modal-content .modal-title {
+        font-size: 25px;
+    }
 
 }
 
@@ -600,12 +709,14 @@ body {
         justify-content: center;
         font-size: 20px;
     }
+
     #explorar .dropdown-user .imagen {
         width: 42px !important;
         height: 42px !important;
         left: -15px;
 
-        }
+    }
+
     .content {
         margin-left: 55px;
     }
@@ -659,6 +770,10 @@ body {
         /* Tamaño del ícono */
         margin-right: 7px;
     }
+    .modal .modal-dialog {
+        max-width: 280px;
+        margin: 20px auto;
+    }
 
 }
 
@@ -680,16 +795,21 @@ body {
         color: white;
     }
 
+    #explorar .Notificaciones {
+        display: block;
+    }
+
     .btn-menu-derecho {
         display: none;
     }
+
     #explorar .dropdown-user .imagen {
         position: relative;
         width: 50px;
         height: 50px;
         border: 2px solid var(--White);
-        }
-    
+    }
+
 }
 
 /* Para pantallas más grandes, el dropdown está oculto por defecto */
@@ -697,8 +817,9 @@ body {
     #explorar .dropdown-user {
         display: none;
     }
-    
+
 }
+
 .login-box {
     background-color: white;
     border-radius: 20px;
@@ -708,74 +829,69 @@ body {
     height: 85vh;
     width: 100%;
     font-size: 18px;
-  }
-  
-  .login-image-container {
+}
+
+.login-image-container {
     background-color: #cfe7fe;
     position: relative;
-  }
-  
-  .login .der{
+}
+
+.login .der {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-  }
+}
 
-  .login-image {
+.login-image {
     background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/74/86/c8/comedor.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
     border: 5px solid var(--color2);
-    width: 92%;  /* Cambiamos a un ancho del 100% para que se ajuste al contenedor */
-    height: 88%; /* Permite que la altura sea automática */
-    max-width: 2500px; /* Limita el tamaño máximo de la imagen para pantallas grandes */
-    aspect-ratio: 4 / 3; /* Mantiene la relación de aspecto de la imagen */
+    width: 92%;
+    /* Cambiamos a un ancho del 100% para que se ajuste al contenedor */
+    height: 88%;
+    /* Permite que la altura sea automática */
+    max-width: 2500px;
+    /* Limita el tamaño máximo de la imagen para pantallas grandes */
+    aspect-ratio: 4 / 3;
+    /* Mantiene la relación de aspecto de la imagen */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-  
-  .form-label {
+
+.form-label {
     color: #5e6b7c;
-  }
-  
-  .form-control {
+}
+
+.form-control {
     background-color: #f1f3f5;
     border: none;
     border-radius: 30px;
     padding: 13px;
-  }
-  
-  .btn-warning {
+}
+
+.btn-warning {
     background-color: #ffd608;
     border: none;
     color: #000;
-    padding: 10px 70px; 
+    padding: 10px 70px;
     font-size: 22px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 10px; 
+    border-radius: 10px;
     text-decoration: none;
     display: flex;
     justify-content: center;
     width: 80%;
     margin: 0 auto;
-  }
+}
 
-  .btn{
+.btn {
     margin-top: 30px;
-  }
-  
-  .btn-warning:hover {
-    background-color: #e2b607;
-  }
+}
 
-
-
-
-
-
-
-
-
+.btn-warning:hover {
+    background-color: #e2b607;
+}
