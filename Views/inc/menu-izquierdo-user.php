@@ -6,17 +6,17 @@
     </div>
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?= SERVERURL ?>home-user">
                 <i class="fa-solid fa-store" style="color: #ffffff;"></i><span>Menú </span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link"  href="<?= SERVERURL ?>pago">
                 <i class="fa-solid fa-hand-holding-dollar" style="color: #ffffff;"></i><span>Pago</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?= SERVERURL ?>sugerencias">
                 <i class="fa-solid fa-comment-medical" style="color: #ffffff;"></i><span>Sugerencias</span>
             </a>
         </li>

@@ -5,7 +5,7 @@ class VistaModelo {
     protected static function obtener_vista_modelo($vista) {
 
         // Lista de páginas permitidas
-        $listaPaginas = ["home-user","user-list","user-update"];
+        $listaPaginas = ["home-user","sugerencias","pago",];
 
         // Verificar si la vista solicitada está en la lista de páginas permitidas
         if (in_array($vista, $listaPaginas)) {
