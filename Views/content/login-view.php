@@ -3,7 +3,7 @@
       <div class="col-md-6 d-none d-md-block login-image-container">
         <div class="login-image"></div>
       </div>
-      <div class="col-md-6 d-flex flex-column justify-content-center p-5">
+      <div class="col-md-6 d-flex flex-column justify-content-center p-5 info">
         <h2 class="text-center mb-4">Inicia Sesión</h2>
         <form>
           <div class="mb-3">
@@ -14,14 +14,13 @@
             <label for="password" class="form-label">Contraseña</label>
             <input type="password" class="form-control" id="password" placeholder="Introduzca su contraseña aquí">
           </div>
-          <div class="text-center mt-3">
-          <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+          <div class="text-center mt-3 cont">
+          <a href="#" class="text-decoration-none btn-cont">¿Olvidaste tu contraseña?</a>
         </div>
-        <a href="<?= SERVERURL ?>home-user"> <button type="button" class="btn btn-warning" >Inicia Sesión</button></a>
-         
+        <a href="<?= SERVERURL ?>home-user" class="text-decoration-none"> <button type="button" class="btn btn-warning" >Inicia Sesión</button></a>
         </form>
         <div class="text-center mt-3">
-          <a href="<?= SERVERURL ?>registro" class="text-decoration-none">Registrarme</a>
+          <a href="<?= SERVERURL ?>registro" class="text-decoration-none btn-regis">Registrarme</a>
         </div>
       </div>
     </div>
