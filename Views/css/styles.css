@@ -18,6 +18,7 @@
 
 body {
     width: 100%;
+    height: 100%;
     font-family: "Manrope", sans-serif;
     background-image: url('https://www.fiftysounds.com/images/graphics/white-low-poly-background-338.jpg');
 
@@ -188,9 +189,11 @@ body {
     margin-left: 250px;
     margin-right: 250px;
     transition: all 0.3s ease;
-    height: auto;
+    height: 100%;
 }
-
+.content .container {
+    height: 100%;
+}
 .content.expanded-left {
     margin-left: 0;
 }
@@ -666,20 +669,19 @@ body {
 }
 
 .content .container .pago .precio-y-controles .precio {
-    padding-left: 30px;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .content .container .pago .precio-y-controles .controles {
+    justify-content: center;
     display: flex;
     align-items: center;
 }
 
-.content .container .pago .precio-y-controles .controles .mas{
+.content .container .pago .precio-y-controles .controles .mas {
     position: relative;
     top: -15px;
-    margin-right: 30px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -692,7 +694,11 @@ body {
     align-items: center;
     font-size: 30px;
 }
-
+.content .container .pago .precio-y-controles .controles .mas:hover {
+    background-color: var(--color3);
+    border: 2px solid var(--color2);
+    color: var(--color2);
+}
 .content .container .pago .precio-y-controles .controles .menos {
     position: relative;
     top: -15px;
@@ -709,18 +715,207 @@ body {
     align-items: center;
     font-size: 30px;
 }
+.content .container .pago .precio-y-controles .controles .menos:hover {
+    background-color: var(--color3);
+    border: 2px solid var(--color2);
+    color: var(--color2);
+}
 .content .container .pago .precio-y-controles .controles .canti {
     margin-right: 20px;
     font-size: 30px;
     font-weight: bold;
 }
+.content .container .pago #metodos-pago {
+    font-size: 35px;
+    font-weight: bold;
+}
+.content .container .pago .metodos .payment-option {
+    width: 80%;
+    margin-top: 10px;
+    background-color: var(--color1);
+    color: var(--White);
+    font-weight: 700;
+    border: 1px solid var(--color1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.9s ease, color 0.9s ease, border 0.9s ease;
+    /* Agrega esta línea */
+}
+.content .container .pago .metodos .payment-option i{
+    font-size: 30px;
+}
+
+.content .container .pago .metodos .payment-option:hover {
+    background-color: var(--color4);
+    color: var(--White);
+    border: 1px solid var(--color4);
+
+}
+
+.content .container .pago .metodos .payment-option .icon2 {
+    margin-left: auto;
+}
+
+.content .container .pago .metodos .payment-option .icon1 {
+    margin-right: 10px;
+}
+
+form input.form-control {
+    border-radius: 0 !important;
+}
+
+.content .container .pago .formContainer .formTarjeta input {
+    border-radius: 0 !important;
+
+}
+.content .container .pago .pago-targeta{
+    padding: 10px !important;
+}
+/* Estilos compartidos por .payment-option2 y .payment-option3 */
+.content .container .pago .payment-option2, 
+.content .container .pago .payment-option3 {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: var(--Black);
+    border-radius: 8px;
+    width: 100%;
+}
+
+.content .container .pago .payment-option2 .icon1,
+.content .container .pago .payment-option3 .icon1 {
+    font-size: 24px;
+    margin-right: 10px;
+    color: var(--Black);
+}
+
+.content .container .pago .payment-option2 .text-content,
+.content .container .pago .payment-option3 .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.content .container .pago .payment-option2 .title,
+.content .container .pago .payment-option3 .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content .container .pago .payment-option2 .subtitle,
+.content .container .pago .payment-option3 .subtitle {
+    font-size: 12px;
+    font-weight: 900;
+    color: #353131;
+}
+
+.content .container .pago .payment-option2 .icon2,
+.content .container .pago .payment-option3 .icon2 {
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+}
 
 
+.content .container .pago .alerta {
+    background-color: var(--color3);
+    border-radius: 5px;
+    padding: 5px;
+}
 
+.content .container .pago .alerta i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: var(--color2);
+}
 
+.content .container .pago .alerta p {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--color2);
+}
 
+.content .container .pago .alerta .ifo-targe {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--White);
+}
 
+.content .container .pago .card-inputs {
+    display: flex;
+    justify-content: space-between;
+}
 
+.content .container .pago .card-input {
+    width: 22%;
+    text-align: center;
+    color: var(--Black);
+}
+
+.content .container .pago input {
+    background-color: var(--White);
+    height: max-content;
+    border-radius: 5px !important;
+    color: var(--Black);
+    font-size: 15px;
+    padding: 10px;
+}
+.content .container .pago select {
+    background-color: var(--White);
+    height: max-content;
+    border-radius: 5px !important;
+    color: var(--Black);
+    font-size: 15px;
+    padding: 10px;
+}
+.content .container .pago select:focus {
+    border: 3px solid var(--color3) ;
+    box-shadow: 0 0 5px var(--color3); 
+    outline: none; 
+}
+.content .container .pago input:focus {
+    border: 3px solid var(--color3) ;
+    box-shadow: 0 0 5px var(--color3); 
+    outline: none; 
+}
+.content .container .pago input::placeholder {
+    color: var(--Black);
+    font-size: 15px;
+}
+
+.form-control[readonly] {
+    user-select: none;
+    pointer-events: none;
+}
+
+.content .container .pago label {
+    margin-top: 5px;
+    color: var(--Black);
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.content .container .pago .pagar {
+    margin-top: 10px;
+}
+
+.content .container .pago .pagar button {
+    width: 50%;
+    background-color: var(--color1);
+    color: var(--White);
+    font-weight: 700;
+    border: 1px solid var(--color1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
 /* Estilo del explorar cuando está en modo responsive */
 @media (max-width: 768px) {
@@ -739,6 +934,7 @@ body {
     #explorar .nav-link {
         justify-content: center;
         font-size: 25px;
+        padding-top: 25px;
     }
 
     #explorar .nav-link span {
@@ -779,6 +975,7 @@ body {
     #explorar:hover .nav-link {
         font-size: 25px;
         justify-content: flex-start;
+        padding-top: 10px;
     }
 
     #explorar:hover .nav-link span {
@@ -811,6 +1008,48 @@ body {
 
     .content .container .recomendacion {
         width: 90%;
+    }
+    .content .container .pago .cantidad p {
+        font-size: 25px;
+    }
+    
+    .content .container .pago .precio-y-controles .precio {
+        font-size: 25px;
+    }
+    .content .container .pago .precio-y-controles .controles .canti {
+        font-size: 25px;
+    }
+    .content .container .pago #metodos-pago {
+        font-size: 30px;
+    }
+    .content .container .pago .metodos .payment-option {
+        font-size: 25px;
+    }
+    .content .container .pago .metodos .payment-option i{
+        font-size: 25px;
+    }
+    .content .container .pago {
+        width: 90%;
+    }
+    .content .container .pago .alerta p {
+        font-size: 14px;
+    }
+
+    .content .container .pago .alerta .ifo-targe {
+        font-size: 12px;
+    }
+
+    .content .container .pago label {
+        font-size: 14px;
+    }
+    .content .container .pago input {
+        font-size: 14px;
+    }
+    .content .container .pago select {
+        font-size: 14px;
+    }
+    .content .container .pago input::placeholder {
+        font-size: 14px;
     }
 
 }
@@ -932,7 +1171,57 @@ body {
     .content .container .recomendacion {
         width: 98.5%;
     }
+    .content .container .pago .cantidad p {
+        font-size: 22px;
+    }
+    
+    .content .container .pago .precio-y-controles .precio {
+        font-size: 25px;
+    }
+    .content .container .pago .precio-y-controles .controles .canti {
+        font-size: 25px;
+    }
+    .content .container .pago #metodos-pago {
+        font-size: 25px;
+    }
+    .content .container .pago .metodos .payment-option {
+        font-size: 22px;
+    }
+    .content .container .pago .metodos .payment-option i{
+        font-size: 22px;
+    }
+    .content .container .pago {
+        width: 98.5%;
+    }
+    .content .container .pago .alerta i {
+        font-size: 1.2rem;
+    }
+    .content .container .pago .alerta p {
+        font-size: 12px;
+    }
 
+    .content .container .pago .alerta .ifo-targe {
+        font-size: 10px;
+    }
+
+    .content .container .pago label {
+        font-size: 12px;
+    }
+    .content .container .pago input {
+        font-size: 12px;
+        padding: 7px;
+    }
+    .content .container .pago select {
+        font-size: 12px;
+        padding: 7px;
+    }
+    .content .container .pago input::placeholder {
+        font-size: 12px;
+    }
+
+    .content .container .pago .pagar button {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -1033,7 +1322,58 @@ body {
     .content .container .card .desconocido .form-check-label {
         font-size: 12px;
     }
+    .content .container .pago .cantidad p {
+        font-size: 18px;
+    }
+    
+    .content .container .pago .precio-y-controles .precio {
+        font-size: 22px;
+    }
+    
+    .content .container .pago .precio-y-controles .controles .canti {
+        font-size: 22px;
+    }
+    .content .container .pago #metodos-pago {
+        font-size: 22px;
+    }
+    .content .container .pago .metodos .payment-option {
+        font-size: 20px;
+    }
+    .content .container .pago .metodos .payment-option i{
+        font-size: 20px;
+    }
+    .content .container .pago .alerta i {
+        font-size: 1rem;
+    }
+    .content .container .pago .alerta p {
+        font-size: 10px;
+    }
 
+    .content .container .pago .alerta .ifo-targe {
+        font-size: 8px;
+    }
+
+    .content .container .pago label {
+        font-size: 11px;
+    }
+    .content .container .pago input {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .content .container .pago select {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .content .container .pago input::placeholder {
+        font-size: 10px;
+    }
+    .content .container .pago .pago-targeta{
+        padding: 1px !important;
+    }
+    
+    .content .container .pago .pagar button {
+        font-size: 10px;
+    }
 }
 
 
