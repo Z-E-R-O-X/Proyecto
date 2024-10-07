@@ -18,6 +18,7 @@
 
 body {
     width: 100%;
+    height: 100%;
     font-family: "Manrope", sans-serif;
     background-image: url('https://www.fiftysounds.com/images/graphics/white-low-poly-background-338.jpg');
 
@@ -33,66 +34,70 @@ body {
     height: max-content !important;
     width: 100%;
     font-size: 18px;
-  }
-  
-  .login-image-container {
-    background-color: #034873 !important;
+}
+
+.login-image-container {
+    background-color: #cfe7fe;
     position: relative;
-  }
-  
-  .login .der{
+}
+
+.login .der {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-  }
+}
 
-  .login-image {
+.login-image {
     background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/74/86/c8/comedor.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    border: 10px solid var(--color2) !important;
-    width: 92%;  /* Cambiamos a un ancho del 100% para que se ajuste al contenedor */
-    height: 88%; /* Permite que la altura sea automática */
-    max-width: 2500px; /* Limita el tamaño máximo de la imagen para pantallas grandes */
-    aspect-ratio: 4 / 3; /* Mantiene la relación de aspecto de la imagen */
+    border: 5px solid var(--color2);
+    width: 92%;
+    /* Cambiamos a un ancho del 100% para que se ajuste al contenedor */
+    height: 88%;
+    /* Permite que la altura sea automática */
+    max-width: 2500px;
+    /* Limita el tamaño máximo de la imagen para pantallas grandes */
+    aspect-ratio: 4 / 3;
+    /* Mantiene la relación de aspecto de la imagen */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-  
-  .form-label {
+
+.form-label {
     color: #5e6b7c;
-  }
-  
-  .form-control {
+}
+
+.form-control {
     background-color: #f1f3f5;
     border: none;
     border-radius: 30px;
     padding: 13px;
-  }
-  
-  .btn-warning {
+}
+
+.btn-warning {
     background-color: #ffd608;
     border: none;
     color: #000;
-    padding: 10px 70px; 
+    padding: 10px 70px;
     font-size: 22px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 10px; 
+    border-radius: 10px;
     text-decoration: none;
     display: flex;
     justify-content: center;
     width: 80%;
     margin: 0 auto;
-  }
+}
 
-  .btn{
+.btn {
     margin-top: 30px;
-  }
-  
-  .btn-warning:hover {
+}
+
+.btn-warning:hover {
     background-color: #e2b607;
   }
 
@@ -171,6 +176,8 @@ body {
 /* ----------------------------------*/
 
   
+}
+
 /* Estilo para el explorar izquierdo */
 #explorar {
     display: block;
@@ -199,9 +206,35 @@ body {
     color: var(--White);
     font-size: 25px;
     display: flex;
+    padding-top: 10px;
     align-items: center;
     white-space: nowrap;
     overflow: hidden;
+}
+
+#explorar .nav-explorar {
+    color: var(--White);
+    font-size: 25px;
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#explorar .nav-explorar .fa-compass {
+    padding-left: 17px;
+    padding-bottom: 5px;
+}
+
+#explorar .Notificaciones .badge {
+    background-color: var(--color2);
+    color: var(--Black);
+    font-size: 0.64rem;
+}
+
+#explorar .Notificaciones {
+    display: none;
 }
 
 #explorar .nav-link i {
@@ -233,9 +266,11 @@ body {
     margin-left: 250px;
     margin-right: 250px;
     transition: all 0.3s ease;
-    height: auto;
+    height: 100%;
 }
-
+.content .container {
+    height: 100%;
+}
 .content.expanded-left {
     margin-left: 0;
 }
@@ -278,53 +313,38 @@ body {
 
 #menu-derecho .btn-notificaciones {
     background-color: var(--color2);
-    /* Color amarillo */
     color: var(--Black);
-    /* Color del texto */
     font-weight: 700;
     border: 1px solid var(--color2);
     padding: 10px 15px;
-    /* Espaciado interno */
     border-radius: 5px;
-    /* Bordes redondeados */
     font-size: 16px;
-    /* Tamaño de la fuente */
     display: inline-flex;
     align-items: center;
-    /* Alinear icono y texto */
     gap: 10px;
-    /* Espacio entre icono y texto */
     position: relative;
-    /* Asegura que el badge se posicione correctamente */
 }
 
 #menu-derecho .btn-notificaciones i {
     font-size: 18px;
-    /* Tamaño del icono */
 }
 
 #menu-derecho .icon-gear {
     margin-left: 10px;
     position: relative;
-    top: 4px;
+    top: 20px;
     font-size: 25px;
-    /* Tamaño del icono de engranaje */
     color: var(--White);
-    /* Color del icono engranaje */
     cursor: pointer;
-    /* Mostrar mano de clic */
     transition: transform 0.3s ease;
-    /* Efecto al pasar el mouse */
 }
 
 #menu-derecho .icon-gear:hover {
     transform: rotate(20deg);
-    /* Girar el engranaje al pasar el mouse */
 }
 
 #menu-derecho .btn-notificaciones .badge {
     font-size: 0.5rem;
-    /* Tamaño de la insignia */
 }
 
 #menu-derecho .perfil {
@@ -342,7 +362,6 @@ body {
     width: 207px;
     height: 207px;
     background: linear-gradient(45deg, #A73EE7, #00EBFF);
-    /* Degradado */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,7 +371,8 @@ body {
     clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
     width: 200px;
     height: 200px;
-    position: relative
+    position: relative;
+    overflow: hidden;
 }
 
 #menu-derecho .hexa img {
@@ -360,6 +380,9 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #menu-derecho .nombre-user {
@@ -391,6 +414,87 @@ body {
 }
 
 
+.modal .modal-dialog {
+    max-width: 500px;
+}
+
+.modal .modal-dialog .modal-content {
+    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-amarllo.jpg');
+    border: 1px solid var(--White);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.modal .modal-content .modal-title {
+    color: var(--Black);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.modal .modal-content .modal-body li {
+    color: var(--White);
+    background-color: var(--color1);
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--White);
+}
+
+.modal .modal-content .modal-body li small {
+    color: var(--White);
+
+}
+
+.modal .btn-close {
+    color: var(--White);
+}
+
+.modal .modal-content .btn-close {
+    background-color: var(--color1) !important;
+    color: var(--White) !important;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 15%;
+    border: 1px solid var(--White);
+    opacity: 1;
+}
+
+.modal .modal-content .btn-close-custom {
+    background-color: var(--color1) !important;
+    color: var(--White) !important;
+    border-radius: 15%;
+    border: 1px solid var(--White);
+    font-size: 1.5rem;
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.modal .modal-content .btn-close-custom:hover,
+.modal .modal-content .btn-close-custom:focus {
+    color: #000;
+    opacity: 0.75;
+    text-decoration: none;
+}
+
+/* Asegúrate de que el botón no tenga outline al enfocarse */
+.modal .modal-content .btn-close-custom:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Aseguramos que el header del modal tenga el display flex */
+.modal .modal-content .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .content.expanded-right {
     margin-right: 0;
 }
@@ -414,12 +518,12 @@ body {
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------ESTILOS DEL HOME-USER-------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .content .container .menu-dia {
     margin: 0 auto;
     padding: 10px;
-    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-menu.jpg');
+    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-amarllo.jpg');
     width: 80%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -437,7 +541,7 @@ body {
 
 .content .container .menu-contenido {
     margin: 0 auto;
-    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-menu.jpg');
+    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-amarllo.jpg');
     margin-top: 25px;
     width: 80%;
     border-radius: 10px;
@@ -505,6 +609,391 @@ body {
 }
 
 
+/* --------------------ESTLOS DEL SUGERENCIAS------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.content .container .calificacion {
+    margin: 0 auto;
+    padding: 10px;
+    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-amarllo.jpg');
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content .container .calificacion .card {
+    border: none;
+}
+
+.content .container .card .titulo {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.content .container .calificacion .card .stars i {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin: 0 10px;
+}
+
+.content .container .calificacion .card .stars i.active {
+    color: #004080;
+}
+
+.content .container .card .escribir {
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.content .container .card .desconocido {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.content .container .calificacion .card .desconocido input {
+    border: 3px solid var(--color1);
+    height: 20px;
+    width: 20px;
+}
+
+.content .container .card .desconocido label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content .container .card .enviar {
+    width: 100%;
+}
+
+.content .container .calificacion .card .enviar button {
+    width: 50%;
+    background-color: var(--color1);
+    color: var(--White);
+    font-weight: 700;
+    border: 1px solid var(--color1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.content .container .recomendacion {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-azul.jpg');
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content .container .recomendacion .card {
+    color: var(--White) !important;
+    border: none;
+}
+
+.content .container .recomendacion .card .desconocido input {
+    border: 3px solid var(--color2);
+    height: 20px;
+    width: 20px;
+}
+
+.content .container .recomendacion .card .enviar button {
+    width: 50%;
+    background-color: var(--color2);
+    color: var(--Black);
+    font-weight: 700;
+    border: 1px solid var(--color2);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* --------------------ESTLOS DEL PAGO------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.content .container .pago {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    background-image: url('http://localhost/PROYECTO/Views/assets/img/fondo-amarllo.jpg');
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content .container .pago .cantidad {
+    background-color: var(--color1);
+    border-radius: 15PX;
+    color: var(--White);
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.content .container .pago .cantidad p {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.content .container .pago .precio-y-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .container .pago .precio-y-controles .precio {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.content .container .pago .precio-y-controles .controles {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.content .container .pago .precio-y-controles .controles .mas {
+    position: relative;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color2);
+    border: 2px solid var(--color2);
+    color: var(--Black);
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.content .container .pago .precio-y-controles .controles .mas:hover {
+    background-color: var(--color3);
+    border: 2px solid var(--color2);
+    color: var(--color2);
+}
+.content .container .pago .precio-y-controles .controles .menos {
+    position: relative;
+    top: -15px;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color2);
+    border: 2px solid var(--color2);
+    color: var(--Black);
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.content .container .pago .precio-y-controles .controles .menos:hover {
+    background-color: var(--color3);
+    border: 2px solid var(--color2);
+    color: var(--color2);
+}
+.content .container .pago .precio-y-controles .controles .canti {
+    margin-right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.content .container .pago #metodos-pago {
+    font-size: 35px;
+    font-weight: bold;
+}
+.content .container .pago .metodos .payment-option {
+    width: 80%;
+    margin-top: 10px;
+    background-color: var(--color1);
+    color: var(--White);
+    font-weight: 700;
+    border: 1px solid var(--color1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.9s ease, color 0.9s ease, border 0.9s ease;
+    /* Agrega esta línea */
+}
+.content .container .pago .metodos .payment-option i{
+    font-size: 30px;
+}
+
+.content .container .pago .metodos .payment-option:hover {
+    background-color: var(--color4);
+    color: var(--White);
+    border: 1px solid var(--color4);
+
+}
+
+.content .container .pago .metodos .payment-option .icon2 {
+    margin-left: auto;
+}
+
+.content .container .pago .metodos .payment-option .icon1 {
+    margin-right: 10px;
+}
+
+form input.form-control {
+    border-radius: 0 !important;
+}
+
+.content .container .pago .formContainer .formTarjeta input {
+    border-radius: 0 !important;
+
+}
+.content .container .pago .pago-targeta{
+    padding: 10px !important;
+}
+/* Estilos compartidos por .payment-option2 y .payment-option3 */
+.content .container .pago .payment-option2, 
+.content .container .pago .payment-option3 {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: var(--Black);
+    border-radius: 8px;
+    width: 100%;
+}
+
+.content .container .pago .payment-option2 .icon1,
+.content .container .pago .payment-option3 .icon1 {
+    font-size: 24px;
+    margin-right: 10px;
+    color: var(--Black);
+}
+
+.content .container .pago .payment-option2 .text-content,
+.content .container .pago .payment-option3 .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.content .container .pago .payment-option2 .title,
+.content .container .pago .payment-option3 .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content .container .pago .payment-option2 .subtitle,
+.content .container .pago .payment-option3 .subtitle {
+    font-size: 12px;
+    font-weight: 900;
+    color: #353131;
+}
+
+.content .container .pago .payment-option2 .icon2,
+.content .container .pago .payment-option3 .icon2 {
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+.content .container .pago .alerta {
+    background-color: var(--color3);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.content .container .pago .alerta i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: var(--color2);
+}
+
+.content .container .pago .alerta p {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--color2);
+}
+
+.content .container .pago .alerta .ifo-targe {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--White);
+}
+
+.content .container .pago .card-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .container .pago .card-input {
+    width: 22%;
+    text-align: center;
+    color: var(--Black);
+}
+
+.content .container .pago input {
+    background-color: var(--White);
+    height: max-content;
+    border-radius: 5px !important;
+    color: var(--Black);
+    font-size: 15px;
+    padding: 10px;
+}
+.content .container .pago select {
+    background-color: var(--White);
+    height: max-content;
+    border-radius: 5px !important;
+    color: var(--Black);
+    font-size: 15px;
+    padding: 10px;
+}
+.content .container .pago select:focus {
+    border: 3px solid var(--color3) ;
+    box-shadow: 0 0 5px var(--color3); 
+    outline: none; 
+}
+.content .container .pago input:focus {
+    border: 3px solid var(--color3) ;
+    box-shadow: 0 0 5px var(--color3); 
+    outline: none; 
+}
+.content .container .pago input::placeholder {
+    color: var(--Black);
+    font-size: 15px;
+}
+
+.form-control[readonly] {
+    user-select: none;
+    pointer-events: none;
+}
+
+.content .container .pago label {
+    margin-top: 5px;
+    color: var(--Black);
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.content .container .pago .pagar {
+    margin-top: 10px;
+}
+
+.content .container .pago .pagar button {
+    width: 50%;
+    background-color: var(--color1);
+    color: var(--White);
+    font-weight: 700;
+    border: 1px solid var(--color1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 /* Estilo del explorar cuando está en modo responsive */
 @media (max-width: 768px) {
     #explorar {
@@ -521,17 +1010,22 @@ body {
 
     #explorar .nav-link {
         justify-content: center;
-        font-size: 18px;
+        font-size: 25px;
+        padding-top: 25px;
     }
 
     #explorar .nav-link span {
         display: none;
     }
 
+    #explorar .nav-link .numero {
+        display: block;
+    }
+
     #explorar .dropdown-user .imagen {
         left: -7px;
-        }
-    
+    }
+
 
     #explorar .dropdown-user strong {
         display: none;
@@ -558,6 +1052,7 @@ body {
     #explorar:hover .nav-link {
         font-size: 25px;
         justify-content: flex-start;
+        padding-top: 10px;
     }
 
     #explorar:hover .nav-link span {
@@ -582,6 +1077,56 @@ body {
 
     .btn-menu-izquierdo.hidden {
         left: 0;
+    }
+
+    .content .container .calificacion {
+        width: 90%;
+    }
+
+    .content .container .recomendacion {
+        width: 90%;
+    }
+    .content .container .pago .cantidad p {
+        font-size: 25px;
+    }
+    
+    .content .container .pago .precio-y-controles .precio {
+        font-size: 25px;
+    }
+    .content .container .pago .precio-y-controles .controles .canti {
+        font-size: 25px;
+    }
+    .content .container .pago #metodos-pago {
+        font-size: 30px;
+    }
+    .content .container .pago .metodos .payment-option {
+        font-size: 25px;
+    }
+    .content .container .pago .metodos .payment-option i{
+        font-size: 25px;
+    }
+    .content .container .pago {
+        width: 90%;
+    }
+    .content .container .pago .alerta p {
+        font-size: 14px;
+    }
+
+    .content .container .pago .alerta .ifo-targe {
+        font-size: 12px;
+    }
+
+    .content .container .pago label {
+        font-size: 14px;
+    }
+    .content .container .pago input {
+        font-size: 14px;
+    }
+    .content .container .pago select {
+        font-size: 14px;
+    }
+    .content .container .pago input::placeholder {
+        font-size: 14px;
     }
 
      
@@ -636,11 +1181,12 @@ body {
         justify-content: center;
         font-size: 25px;
     }
+
     #explorar .dropdown-user .imagen {
         left: -13px;
 
-        }
-    
+    }
+
     .content {
         margin-left: 65px;
     }
@@ -684,7 +1230,6 @@ body {
 
     .content .container .menu-contenido .ingredientes i {
         margin-right: 5px;
-        /* Espacio entre el ícono y el texto */
         font-size: 10px;
     }
 
@@ -703,6 +1248,96 @@ body {
         margin-right: 7px;
     }
 
+    .modal .modal-dialog {
+        max-width: 350px;
+        margin: 20px auto;
+    }
+
+    .modal .modal-content .modal-title {
+        font-size: 25px;
+    }
+
+    .content .container .calificacion .card .stars i {
+        margin: 0 1px;
+    }
+
+    .content .container .calificacion {
+        width: 98.5%;
+    }
+
+    .content .container .card .titulo {
+        font-size: 20px;
+    }
+
+    .content .container .card .escribir {
+        padding: 1px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .content .container .card .desconocido {
+        margin-left: 35px;
+        margin-right: 25px;
+    }
+
+    .content .container .card .desconocido .form-check-label {
+        font-size: 15px;
+    }
+
+    .content .container .recomendacion {
+        width: 98.5%;
+    }
+    .content .container .pago .cantidad p {
+        font-size: 22px;
+    }
+    
+    .content .container .pago .precio-y-controles .precio {
+        font-size: 25px;
+    }
+    .content .container .pago .precio-y-controles .controles .canti {
+        font-size: 25px;
+    }
+    .content .container .pago #metodos-pago {
+        font-size: 25px;
+    }
+    .content .container .pago .metodos .payment-option {
+        font-size: 22px;
+    }
+    .content .container .pago .metodos .payment-option i{
+        font-size: 22px;
+    }
+    .content .container .pago {
+        width: 98.5%;
+    }
+    .content .container .pago .alerta i {
+        font-size: 1.2rem;
+    }
+    .content .container .pago .alerta p {
+        font-size: 12px;
+    }
+
+    .content .container .pago .alerta .ifo-targe {
+        font-size: 10px;
+    }
+
+    .content .container .pago label {
+        font-size: 12px;
+    }
+    .content .container .pago input {
+        font-size: 12px;
+        padding: 7px;
+    }
+    .content .container .pago select {
+        font-size: 12px;
+        padding: 7px;
+    }
+    .content .container .pago input::placeholder {
+        font-size: 12px;
+    }
+
+    .content .container .pago .pagar button {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -714,12 +1349,14 @@ body {
         justify-content: center;
         font-size: 20px;
     }
+
     #explorar .dropdown-user .imagen {
         width: 42px !important;
         height: 42px !important;
         left: -15px;
 
-        }
+    }
+
     .content {
         margin-left: 55px;
     }
@@ -774,69 +1411,87 @@ body {
         margin-right: 7px;
     }
 
-   
+    .modal .modal-dialog {
+        max-width: 280px;
+        margin: 20px auto;
+    }
+
+    .content .container .calificacion .card .stars i {
+        font-size: 1.7rem;
+        margin: 0;
+    }
+
+    .content .container .card .titulo {
+        font-size: 18px;
+    }
+
+    .content .container .card .escribir {
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+
+    .content .container .card .desconocido {
+        margin-left: 15px;
+        margin-right: 10px;
+    }
+
+    .content .container .card .desconocido .form-check-label {
+        font-size: 12px;
+    }
+    .content .container .pago .cantidad p {
+        font-size: 18px;
+    }
     
-
-}
-
-@media (max-width: 426px) {
-
-    .register-input{
+    .content .container .pago .precio-y-controles .precio {
+        font-size: 22px;
+    }
+    
+    .content .container .pago .precio-y-controles .controles .canti {
+        font-size: 22px;
+    }
+    .content .container .pago #metodos-pago {
+        font-size: 22px;
+    }
+    .content .container .pago .metodos .payment-option {
+        font-size: 20px;
+    }
+    .content .container .pago .metodos .payment-option i{
+        font-size: 20px;
+    }
+    .content .container .pago .alerta i {
+        font-size: 1rem;
+    }
+    .content .container .pago .alerta p {
         font-size: 10px;
     }
 
-    .register-label{
-        font-size: 12px;
+    .content .container .pago .alerta .ifo-targe {
+        font-size: 8px;
     }
 
-    .row .col-md-6 {
-        margin-top: 10px; /* Añade un margen inferior para separar los campos */
+    .content .container .pago label {
+        font-size: 11px;
     }
-
-    .titulo{
-        margin-bottom: 0px !important;
+    .content .container .pago input {
+        font-size: 10px;
+        padding: 5px;
     }
-
-    .register-btn{
-        font-size: 12px;
-        padding: 10px 20px;
-        margin-top: -5px;
-      }
-
+    .content .container .pago select {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .content .container .pago input::placeholder {
+        font-size: 10px;
+    }
+    .content .container .pago .pago-targeta{
+        padding: 1px !important;
+    }
+    
+    .content .container .pago .pagar button {
+        font-size: 10px;
+    }
 }
 
-@media (max-width: 376px) {
-
-    .info{
-        padding: 0px 10% !important;
-    }
-    .btn-warning {
-        padding: 10px 30px !important; 
-        font-size: 15px !important;
-        width: 30vh !important;
-      }
-    
-      .btn-regis{
-        font-size: 12px;
-      }
-    
-      .btn-cont{
-        font-size: 12px;
-      }
-
-      .cont{
-        margin-top: -12px !important;
-      }
-    
-      .form-control{
-        font-size: 12px;
-      }
-    
-      .form-label{
-        font-size: 12px;
-      }
-
-}
 
 
 @media (max-width: 991px) {
@@ -855,16 +1510,25 @@ body {
         color: white;
     }
 
+    #explorar .Notificaciones {
+        display: block;
+    }
+
     .btn-menu-derecho {
         display: none;
     }
+
     #explorar .dropdown-user .imagen {
         position: relative;
         width: 50px;
         height: 50px;
         border: 2px solid var(--White);
-        }
-    
+    }
+
+    .content .container .card .desconocido label {
+        font-size: 18px;
+    }
+
 }
 
 /* Para pantallas más grandes, el dropdown está oculto por defecto */
@@ -872,8 +1536,9 @@ body {
     #explorar .dropdown-user {
         display: none;
     }
-    
+
 }
+
 .login-box {
     background-color: white;
     border-radius: 20px;
@@ -883,74 +1548,69 @@ body {
     height: 85vh;
     width: 100%;
     font-size: 18px;
-  }
-  
-  .login-image-container {
+}
+
+.login-image-container {
     background-color: #cfe7fe;
     position: relative;
-  }
-  
-  .login .der{
+}
+
+.login .der {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-  }
+}
 
-  .login-image {
+.login-image {
     background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/74/86/c8/comedor.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
     border: 5px solid var(--color2);
-    width: 92%;  /* Cambiamos a un ancho del 100% para que se ajuste al contenedor */
-    height: 88%; /* Permite que la altura sea automática */
-    max-width: 2500px; /* Limita el tamaño máximo de la imagen para pantallas grandes */
-    aspect-ratio: 4 / 3; /* Mantiene la relación de aspecto de la imagen */
+    width: 92%;
+    /* Cambiamos a un ancho del 100% para que se ajuste al contenedor */
+    height: 88%;
+    /* Permite que la altura sea automática */
+    max-width: 2500px;
+    /* Limita el tamaño máximo de la imagen para pantallas grandes */
+    aspect-ratio: 4 / 3;
+    /* Mantiene la relación de aspecto de la imagen */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-  
-  .form-label {
+
+.form-label {
     color: #5e6b7c;
-  }
-  
-  .form-control {
+}
+
+.form-control {
     background-color: #f1f3f5;
     border: none;
     border-radius: 30px;
     padding: 13px;
-  }
-  
-  .btn-warning {
+}
+
+.btn-warning {
     background-color: #ffd608;
     border: none;
     color: #000;
-    padding: 10px 70px; 
+    padding: 10px 70px;
     font-size: 22px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 10px; 
+    border-radius: 10px;
     text-decoration: none;
     display: flex;
     justify-content: center;
     width: 80%;
     margin: 0 auto;
-  }
+}
 
-  .btn{
+.btn {
     margin-top: 30px;
-  }
-  
-  .btn-warning:hover {
-    background-color: #e2b607;
-  }
+}
 
-
-
-
-
-
-
-
-
+.btn-warning:hover {
+    background-color: #e2b607;
+}
