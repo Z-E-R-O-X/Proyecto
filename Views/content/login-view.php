@@ -8,11 +8,11 @@
         <form>
           <div class="mb-3">
             <label for="email" class="form-label">Correo</label>
-            <input type="email" class="form-control" id="email" placeholder="Introduce tu correo electrónico aquí">
+            <input type="email" class="form-input" id="email" placeholder="Introduce tu correo electrónico aquí">
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password" placeholder="Introduzca su contraseña aquí">
+            <input type="password" class="form-input" id="password" placeholder="Introduzca su contraseña aquí">
           </div>
           <div class="text-center mt-3 cont">
           <a href="#" class="text-decoration-none btn-cont">¿Olvidaste tu contraseña?</a>

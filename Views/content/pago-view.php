@@ -57,7 +57,7 @@
                             <i class="fa-solid fa-lock"></i>
                             <div>
                                 <p class="mb-0">La información de tu tarjeta está protegida.</p>
-                                <p class="ifo-targe"> Nos asociamos con terceros de confianza para garantizar que los datos de su tarjeta se mantengan seguros. Esta pagina no tendrá acceso a la información de su tarjeta. </p>
+                                <p class="ifo-targe"> Nos asociamos con terceros de confianza para garantizar que los datos de su tarjeta se mantengan seguros. Esta página no tendrá acceso a la información de su tarjeta. </p>
                             </div>
                         </div>
 
