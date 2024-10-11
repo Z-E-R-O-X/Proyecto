@@ -1,12 +1,12 @@
 <?php
 
 const SERVER = "localhost";
-const DB = "";
+const DB = "almuerzos";
 const USER = "root";
 const PASS = "";
 
 const SGBD = "mysql:host=".SERVER.";dbname=".DB; 
 
 const METHOD = "AES-256-CBC";
-const SECRET_KEY = '$CLAY2f3a8b';
-const SECRET_IV = '14032024';
+const SECRET_KEY = '$PROYECT2f3a8b';
+const SECRET_IV = '15052004';

@@ -2,7 +2,7 @@
 
 class VistaModelo {
 
-    protected static function obtener_vista_modelo($vista) {
+    protected static function obtener_vista_modelo($vista){
 
         // Lista de páginas permitidas
         $listaPaginas = ["home-user","sugerencias","pago",];

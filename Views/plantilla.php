@@ -18,7 +18,8 @@
 <body>
 
     <?php
-
+    $peticionAjax=false;
+    
     require_once "./Controller/VistaControlador.php";
 
     $IVC = new VistaControlador();
