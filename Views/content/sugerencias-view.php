@@ -2,7 +2,7 @@
     <div class="container">
         <div class="calificacion">
             <div class="card ">
-                <h2 class="text-center titulo">CALIFICACIÓN MENU SAB 17/08:</h2>
+                <h2 class="text-center titulo">CALIFICACIÓN MENÚ SAB 17/08:</h2>
                 <div class="stars text-center mb-3">
                     <i class="fa-solid fa-star" data-value="1"></i>
                     <i class="fa-solid fa-star" data-value="2"></i>
@@ -30,7 +30,7 @@
     <div class="container">
         <div class="recomendacion">
             <div class="card ">
-                <h2 class="text-center titulo">RECOMENDACION PARA PROXIMO MENU:</h2>
+                <h2 class="text-center titulo">RECOMENDACIÓN PARA PRÓXIMO MENÚ:</h2>
 
                 <div class="text-center form-group mb-3 escribir">
                     <textarea id="sugerencias" class="form-control" rows="3" placeholder="Escribe tus recomendaciones aquí..."></textarea>
