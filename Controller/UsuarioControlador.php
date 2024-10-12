@@ -139,9 +139,9 @@ class UsuarioControlador extends UsuarioModelo
             "CEL" => $celular,
             "CLA" => $clave,
             "FOT" => "null",
-            "ROL" => "usuario"
+            "ROL" => "admin"
         ];
-        
+
         $agregar_usuario = UsuarioModelo::agregar_usuario_modelo($datos_usuario_reg);
 
         if ($agregar_usuario->rowCount() == 1) {
@@ -159,7 +159,7 @@ class UsuarioControlador extends UsuarioModelo
                 "Tipo" => "error"
             ];
         }
-        
+
         echo json_encode($alerta);
         
     }
