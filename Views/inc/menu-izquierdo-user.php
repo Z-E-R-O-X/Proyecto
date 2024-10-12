@@ -39,7 +39,7 @@
     <div class="dropdown dropdown-user">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="<?= SERVERURL ?>Views/assets/avatar/mi foto.jpg" class="rounded-circle me-2 imagen">
-            <strong>Camilo Ramirez</strong>
+            <strong><?= $_SESSION['nombre_alm']." ".$_SESSION['apellido_alm']; ?></strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-cog me-2"></i> Ajustes</a></li>
@@ -47,7 +47,7 @@
             <li>
                 <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-sign-out-alt me-2"></i> Cerrar sesión</a></li>
+            <li><button class="close-session"><a class="dropdown-item" href="#"><i class="fa-solid fa-sign-out-alt me-2"></i> Cerrar sesión</a></button></li>
         </ul>
     </div>
 
