@@ -21,7 +21,7 @@ class LoginControlador extends LoginModelo
             echo '
             <script>
                 Swal.fire({
-                   title: "Ocurrio un error Inesperado",
+                   title: "Ocurrió un error Inesperado",
                     text: "No has llenado todos los campos",
                    type: "error"
                    confirmButtonText: "Aceptar"
@@ -37,7 +37,7 @@ class LoginControlador extends LoginModelo
             echo '
                 <script>
                     Swal.fire({
-                        title: "Ocurrio un error Inesperado",
+                        title: "Ocurrió un error Inesperado",
                         text: "La CONTRASEÑA no coincide con el formato solicitado",
                         type: "error"
                        confirmButtonText: "Aceptar"
@@ -123,11 +123,12 @@ class LoginControlador extends LoginModelo
 				];
 			}else{
 				$alerta=[
-					"Alerta"=>"simple",
-					"Titulo"=>"Ocurrió un error inesperado",
-					"Texto"=>"No se pudo cerrar la sesion en el sistema",
-					"Tipo"=>"error"
-				];
+                    "Alerta"=>"simple",
+                    "Titulo"=>"Ocurrió un error inesperado",
+                    "Texto"=>"No se pudo cerrar la sesión en el sistema",
+                    "Tipo"=>"error"
+                ];
+
 			}
 			echo json_encode($alerta);
 		} 

@@ -19,23 +19,23 @@ function enviar_formulario_ajax(e) {
     }
 
     let texto_alerta;
-
+    
     if (tipo === "save") {
-        texto_alerta = "texto de alerta de tipo save"
+        texto_alerta = "Se guardará este nuevo registro. ¿Deseas continuar?";
     } else if (tipo === "delete") {
-        texto_alerta = "texto de alerta de tipo delete"
+        texto_alerta = "Este registro será eliminado permanentemente. ¿Estás seguro de continuar?";
     } else if (tipo === "update") {
-        texto_alerta = "texto de alerta de tipo update"
+        texto_alerta = "La información será actualizada. ¿Confirmas esta acción?";
     } else if (tipo === "search") {
-        texto_alerta = "texto de alerta de tipo search"
+        texto_alerta = "Se realizará la búsqueda solicitada. ¿Deseas continuar?";
     } else if (tipo === "loans") {
-        texto_alerta = "texto de alerta de tipo loans"
+        texto_alerta = "Se procesará este préstamo. ¿Confirmas la operación?";
     } else {
-        texto_alerta = "texto de alerta de tipo"
+        texto_alerta = "Se realizará la operación solicitada. ¿Deseas continuar?";
     }
 
     Swal.fire({
-        title: 'Estas seguro',
+        title: '¿Estás seguro?',
         text: texto_alerta,
         icon: 'question',
         showCancelButton: true,
@@ -46,10 +46,10 @@ function enviar_formulario_ajax(e) {
     }).then((result) => {
         if (result.isConfirmed) {
             fetch(action, config)
-            .then(respuesta => respuesta.json())
-            .then(respuesta=> {
-                return alertas_ajax(respuesta);
-            })
+                .then(respuesta => respuesta.json())
+                .then(respuesta => {
+                    return alertas_ajax(respuesta);
+                })
         }
     });
 }

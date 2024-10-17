@@ -23,7 +23,7 @@ class UsuarioControlador extends UsuarioModelo
         if ($nombre == "" || $apellido == "" || $correo == "" || $celular == "" || $clave1 == "" || $clave2 == "") {
             $alerta = [
                 "Alerta" => "simple",
-                "Titulo" => "Ocurrio un error Inesperado",
+                "Titulo" => "Ocurrió un error Inesperado",
                 "Texto" => "No has llenado todos los campos",
                 "Tipo" => "error"
             ];
@@ -35,7 +35,7 @@ class UsuarioControlador extends UsuarioModelo
         if (MainModelo::verificar_datos("[A-Za-zÀ-ÿ\s]{1,50}", $nombre)) {
             $alerta = [
                 "Alerta" => "simple",
-                "Titulo" => "Ocurrio un error Inesperado",
+                "Titulo" => "Ocurrió un error Inesperado",
                 "Texto" => "El NOMBRE no coincide con el formato solicitado",
                 "Tipo" => "error"
             ];
@@ -46,7 +46,7 @@ class UsuarioControlador extends UsuarioModelo
         if (MainModelo::verificar_datos("[A-Za-zÀ-ÿ\s]{1,50}", $apellido)) {
             $alerta = [
                 "Alerta" => "simple",
-                "Titulo" => "Ocurrio un error Inesperado",
+                "Titulo" => "Ocurrió un error Inesperado",
                 "Texto" => "El APELLIDO no coincide con el formato solicitado",
                 "Tipo" => "error"
             ];
@@ -57,7 +57,7 @@ class UsuarioControlador extends UsuarioModelo
         if (MainModelo::verificar_datos("[0-9]{10,10}", $celular)) {
             $alerta = [
                 "Alerta" => "simple",
-                "Titulo" => "Ocurrio un error Inesperado",
+                "Titulo" => "Ocurrió un error Inesperado",
                 "Texto" => "El CELULAR no coincide con el formato solicitado",
                 "Tipo" => "error"
             ];
@@ -71,7 +71,7 @@ class UsuarioControlador extends UsuarioModelo
         ) {
             $alerta = [
                 "Alerta" => "simple",
-                "Titulo" => "Ocurrio un error Inesperado",
+                "Titulo" => "Ocurrió un error Inesperado",
                 "Texto" => "Las CONTRASEÑAS no coincide con el formato solicitado",
                 "Tipo" => "error"
             ];
@@ -83,7 +83,7 @@ class UsuarioControlador extends UsuarioModelo
         if ($clave1 != $clave2) {
             $alerta = [
                 "Alerta" => "simple",
-                "Titulo" => "Ocurrio un error Inesperado",
+                "Titulo" => "Ocurrió un error Inesperado",
                 "Texto" => "Las CONTRASEÑAS ingresadas no coinciden",
                 "Tipo" => "error"
             ];
@@ -100,7 +100,7 @@ class UsuarioControlador extends UsuarioModelo
             if ($check_correo->rowCount() > 0) {
                 $alerta = [
                     "Alerta" => "simple",
-                    "Titulo" => "Ocurrio un error Inesperado",
+                    "Titulo" => "Ocurrió un error Inesperado",
                     "Texto" => "El CORREO ingresado ya se encuentra registrado en el sistema",
                     "Tipo" => "error"
                 ];
@@ -110,7 +110,7 @@ class UsuarioControlador extends UsuarioModelo
         } else {
             $alerta = [
                 "Alerta" => "simple",
-                "Titulo" => "Ocurrio un error Inesperado",
+                "Titulo" => "Ocurrió un error Inesperado",
                 "Texto" => "El CORREO no coincide con el formato solicitado",
                 "Tipo" => "error"
             ];
@@ -122,7 +122,7 @@ class UsuarioControlador extends UsuarioModelo
         if ($check_celular->rowCount() > 0) {
             $alerta = [
                 "Alerta" => "simple",
-                "Titulo" => "Ocurrio un error Inesperado",
+                "Titulo" => "Ocurrió un error Inesperado",
                 "Texto" => "El CELULAR ingresado ya se encuentra registrado en el sistema",
                 "Tipo" => "error"
             ];
@@ -148,7 +148,7 @@ class UsuarioControlador extends UsuarioModelo
             $alerta = [
                 "Alerta" => "limpiar",
                 "Titulo" => "Usuario registrado",
-                "Texto" => "Los datos del usuario han sido registrados con éxito",
+                "Texto" => "Tus datos sean registrado correctamente",
                 "Tipo" => "success"
             ];
         } else {
@@ -161,6 +161,5 @@ class UsuarioControlador extends UsuarioModelo
         }
 
         echo json_encode($alerta);
-        
     }
 }

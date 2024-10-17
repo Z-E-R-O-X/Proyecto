@@ -23,7 +23,7 @@
         </div>
     </div>
     <p class="nombre-user"><?= $_SESSION['nombre_alm']." ".$_SESSION['apellido_alm']; ?></p>
-    <button class="btn btn-danger close-session"><i class="fa-solid fa-sign-out-alt me-2"></i> Cerrar sesión</button>
+    <button class="close-session"><i class="fa-solid fa-sign-out-alt me-2"></i> Cerrar sesión</button>
 </div>
 
 <?php include "./Views/inc/modal-notificaciones.php"; ?>
